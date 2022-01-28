@@ -8,7 +8,7 @@
 
 - id: heating
   name: Heating
-  subtitle: "Boiler service and replacement, cylinder upgrades and more."
+  subtitle: "Boiler service/replacement, cylinder upgrades and more..."
   href: /heating/
   hover-text: "We carry out all repairs and servicing to nearly all types and makes of boilers by all manufacturers. From new flues to new tanks and bases we do everything to get your heating back up and running with the minimum of fuss. Our fully qualified heating engineers all carry our full company public liability insurance for complete peace of mind."
   show-on-homepage: true
@@ -17,7 +17,7 @@
 - id: electrics
   name: Electrics
   supertitle: "&nbsp;"
-  subtitle: "All domestic jobs undertaken, including EV charging points."
+  subtitle: "All domestic jobs undertaken, plus EV charging points!"
   href: /electrics/
   hover-text: "From blown fuses or new sockets and lights to full rewires. New consumer units supplied and fitted. Home extensions and garden rooms, home offices and sheds. We also install EV charging points!"
   show-on-homepage: true
