@@ -1,2 +1,7 @@
-name: Anglian P.H.E.
-markdown: kramdown
+title: Anglian P.H.E.
+description: "Anglian P.H.E. blah blah blah blah"
+baseurl: ""
+url: "https://joycestick.github.io/anglianphe.co.uk"
+sass:
+    style: compressed
+permalink: /portfolio/:year/:month/:title/

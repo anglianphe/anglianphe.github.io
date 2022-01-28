@@ -1,760 +1,100 @@
 <!DOCTYPE html>
-<html>
 
+<html lang="en-GB" prefix="og: http://ogp.me/ns#">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<script id="facebook-jssdk" src="/js/sdk.js"></script>
-	<link rel="stylesheet" type="text/css" href="/style/banner-styles.css">
-	<link rel="stylesheet" type="text/css" href="/style/iconochive.css">
+    <!-- Basics -->
+    <meta charset="UTF-8">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="Plumbing,Heating,Electrics,Bathroom,EV,Boiler,Radiator">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>{{ page.title }}</title>
+    <title>{{ page.title | replace: '&nbsp;', ' ' }} &mdash; {{ site.title | replace: '&nbsp;', ' ' }}</title>
 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Preloads -->
+    <link rel="preload" href="/fonts/Roboto-Regular-webfont.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/Roboto-Light-webfont.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/Roboto-Medium-webfont.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/Roboto-Bold-webfont.woff" as="font" type="font/woff" crossorigin>
 
-	<meta name="description" content="Covering a 30 Miles Radius of Haverhill. Call us now to book your boiler in for a service, we also specialize in boiler installations including caravans, homes and mobile homes!">
-	<meta name="keywords" content="Plumbers in Sudbury, Plumbers in Clare, Plumbers in Glemsford">
+    <!-- Search Engines -->
+    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
+    <meta name="google" content="nositelinkssearchbox">
+    <link rel="canonical" href="/{{ page.url }}"/>
 
-	<link rel="stylesheet" href="/style/font-awesome.min.css">
+    <!-- Open Graph -->
+    <meta property="og:image" content="{% if page.og-image %}{{ page.og-image }}{% else %}/img/default-og-image.png{% endif %}"/>
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{ page.title | replace: '&nbsp;', ' ' }}"/>
+    <meta property="og:url" content="/{{ page.url }}"/>
+    <meta property="og:site_name" content="{{ site.title | replace: '&nbsp;', ' ' }}"/>
+    
+    <!-- Application Data -->
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@graph":[
+                {
+                    "@type":"Organization",
+                    "@id":"{{ site.url }}/#organization",
+                    "name":"Anglian P.H.E.",
+                    "url":"{{ site.url }}/",
+                    "sameAs":[
+                        "https://www.facebook.com/anglianphe"
+                    ],
+                    "logo":{
+                        "@type":"ImageObject",
+                        "@id":"{{ site.url }}/#logo",
+                        "inLanguage":"en-GB",
+                        "url":"{{ site.url }}/img/logo.png",
+                        "width":200,
+                        "height":300,
+                        "caption":"Anglian P.H.E."
+                    }
+                }
+            ]
+        }
+    </script>
 
-	<link rel="stylesheet" href="/style/stylesheet.css">
-
-	<!--
-	<link href="./Anglian Plumbing, Heat &amp; Electrics_files/css" rel="stylesheet" type="text/css">
-
-	<script src="./Anglian Plumbing, Heat &amp; Electrics_files/js"></script>-->
-
-	<script src="/js/jquery.min.js"></script>
-	<script src="/js/jquery-ui.min.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<script src="/js/owl.carousel.min.js"></script>
-	<script src="/js/jquery-navtoselect.js"></script>
-	<script src="/js/core_bootstrap.js"></script>
-	<script src="/js/bootstrap-datepicker.js"></script>
-	<script src="/js/validator.min.js"></script>
-	<script src="/js/jquery.cookie.js"></script>
-	<script src="/js/jquery.matchHeight-min.js"></script>
-	<script src="/js/jquery.dataTables.min.js"></script>
-	<script src="/js/dataTables.bootstrap.min.js"></script>
-	<script src="/js/bootstrap-select.min.js"></script>
-	<script src="/js/wow.min.js"></script>
-
-
-	<script src="/js/masonry.pkgd.min.js"></script>
-
-	<script type="text/javascript">
-		jQuery(document).ready(function () {
-			$('.datepicker').datepicker({
-				format: 'dd/mm/yyyy',
-				autoclose: true
-			})
-
-			$('.datatable').DataTable();
-
-			new WOW().init();
-
-		});
-	</script>
-
-	<script src="/js/api.js"></script>
+    <!-- Style and Scripts -->
+    <link rel="stylesheet" href="/css/main.css?v={{ 'now' | date: '%y%m%d%H%M' }}" type="text/css" media="all"/>
+    
 </head>
 
-
-
-<body id="page22088" class="unconstrained general-corners-none img-corners-none nav0 homepage page22088 nouid">
-
-	<div id="Home"></div>
-
-	<script>
-		(function (d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "http://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
-
-
-
-
-
-	<div id="body-container">
-
-		<div id="header-section">
-			<div id="header-section-container" class="wrapper container bottom-corners-none">
-
-
-				<div class="printedelement request-quote  " id="PrintHTMLBlock2719">
-
-
-
-
-
-					<a href="/contact">Request
-						Quote</a>
-
-
-
-				</div>
-
-
-
-
-				<div class="row sideoflogonav" id="logo-left">
-
-					<div class="col-md-2">
-						<div id="logo" class="logoimage">
-							<a id="logolink"
-								href="/"><img
-									class="img-responsive"
-									src="/img/sr_257177.png"
-									alt="Plumbers in Sudbury | Plumbers in Clare | Plumbers in Glemsford | Anglian PHE Limited"></a>
-							<h1><a id="logolink"
-									href="/">Plumbers
-									in Sudbury | Plumbers in Clare | Plumbers in Glemsford | Anglian PHE Limited</a>
-							</h1>
-						</div>
-					</div>
-
-					<div class="col-md-10">
-						<div class="row">
-							<div class="col-sm-12  text-right">
-
-
-								<div class="social-buttons socialmedialinkscontainer visible-xs shape-none size-large">
-
-
-									<p>
-										<a target="_blank" class="btn btn-social-icon btn-lg  btn-facebook"
-											href="http://www.facebook.com/anglianphe/"><i
-												class="fa fa-facebook"></i></a>
-
-
-
-										<a target="_blank" class="btn btn-social-icon  btn-lg btn-youtube"
-											href="http://www.youtube.com/channel/UChCIlC4OKBao2YtgTME_4Cg"><i
-												class="fa fa-youtube-play"></i></a>
-
-
-
-
-
-
-										<a class="btn btn-social-icon btn-lg  btn-email"
-											href="mailto:info@anglianphe.co.uk"><i
-												class="fa fa-envelope"></i></a></p>
-								</div>
-
-								<div class="social-buttons hidden-xs socialmedialinkscontainer shape-none size-large">
-									<p>
-										<a target="_blank" class="btn btn-social-icon btn-lg btn-facebook"
-											href="http://www.facebook.com/anglianphe/"><i
-												class="fa fa-facebook"></i></a>
-
-
-
-										<a target="_blank" class="btn btn-social-icon btn-lg btn-youtube"
-											href="http://www.youtube.com/channel/UChCIlC4OKBao2YtgTME_4Cg"><i
-												class="fa fa-youtube-play"></i></a>
-
-
-
-
-
-
-										<a class="btn btn-social-icon btn-lg btn-email"
-											href="mailto:lancepilks@me.com"><i
-												class="fa fa-envelope"></i></a></p>
-								</div>
-								<h4 id="contact-line">CALL NOW: <a href="tel:+441787278511">01787 278 511</a> or <a href="tel:+447825348536">07825 348 536</a></h4>
-
-							</div>
-
-							<div
-								class="col-sm-12 nextologo-nav nav-height-slim text-uppercase  mainnavigation hidden-sm hidden-xs pull-right ">
-								<div class="horizontalnav">
-
-
-									<nav role="tablist" id="nav_navigation">
-										<ul class=" top-corners-none bottom-corners-none" id="nav_navigation_ul">
-
-											<li id="nav_link22088" class="parentnavli  firstli active  temp1235"><a
-													href="/">
-													Home</a>
-											</li>
-
-											<li id="nav_link22089" class="parentnavli     temp1235"><a
-													href="/about">
-													About</a>
-											</li>
-
-											<li id="nav_link22092" class="parentnavli     temp2896"><a
-													href="/emergency">
-													Emergency</a>
-											</li>
-
-											<li id="nav_link22093" class="parentnavli     temp2896"><a
-													href="/plumbing">
-													Plumbing</a>
-											</li>
-
-											<li id="nav_link22094" class="parentnavli     temp2896"><a
-													href="/heating">
-													Heating</a>
-											</li>
-
-											<li id="nav_link22097" class="parentnavli     temp2896"><a
-													href="/electrics">
-													Electrics</a>
-											</li>
-
-											<li id="nav_link22182" class="parentnavli     temp2896"><a
-													href="/lpg">
-													LPG</a>
-											</li>
-
-											<li id="nav_link22095" class="parentnavli     temp2896"><a
-													href="/gas-safe">
-													Gas Safe</a>
-											</li>
-
-											<li id="nav_link22096" class="parentnavli     temp2896"><a
-													href="/areas">
-													Areas</a>
-											</li>
-
-											<li id="nav_link22091" class="parentnavli lastli    temp2906"><a
-													href="/contact">
-													Contact</a>
-											</li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-
-						</div>
-
-
-					</div>
-
-
-				</div>
-
-
-
-
-
-
-
-				<div id="nav-small" class="visible-xs visible-sm form-group">
-					<select class="form-control"
-						onchange="if ($(this).data(&#39;linkable&#39;) !== false) {document.location.href = this.value;}">
-						<option value="#" data-linkable="false">Navigate to...</option>
-						<optgroup label="Main Navigation">
-
-							<option class="currentpage" value="/">Home</option>
-							<option class="" value="/about">About</option>
-							<option class="" value="/emergency">Emergency</option>
-							<option class="" value="/plumbing">Plumbing</option>
-							<option class="" value="/heating">Heating</option>
-							<option class="" value="/electrics">Electrics</option>
-							<option class="" value="/lpg">LPG</option>
-							<option class="" value="/gas-safe">Gas Safe</option>
-							<option class="" value="/areas">Areas</option>
-							<option class="" value="/contact">Contact</option>
-						</optgroup>
-
-					</select> </div>
-
-			</div>
-		</div>
-
-		<div id="banner-section">
-			<div id="banner-section-container" class="wrapper top-corners-none bottom-corners-none ">
-				<div id="banner">
-					<style>
-						#owl-banner-1643 .banner-slide img {
-							display: block;
-							width: 100%;
-							height: auto;
-						}
-					</style>
-					<script>
-						$(document).ready(function () {
-
-							$("#owl-banner-1643").owlCarousel({
-
-
-								navigation: false,
-								pagination: false,
-
-								slideSpeed: 400,
-								paginationSpeed: 500,
-
-								singleItem: true,
-
-								transitionStyle: 'fade',
-
-								autoPlay: '7000',
-								itemsScaleUp: true,
-								autoHeight: true
-
-							});
-
-
-
-						});
-					</script>
-					<div id="owl-banner-1643" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
-						<div class="owl-wrapper-outer autoHeight" style="height: 388px;">
-							<div class="owl-wrapper"
-								style="width: 11520px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(-2880px, 0px, 0px); transform-origin: 3600px center; perspective-origin: 3600px center;">
-								<div class="owl-item" style="width: 1440px;">
-									<div class="banner-slide" id="banner-slide-93445">
-										<img src="/img/sr_257254_large.jpg"
-											alt="Plumbers in Sudbury, Plumbers in Clare, Plumbers in Glemsford">
-
-
-
-									</div>
-								</div>
-								<div class="owl-item" style="width: 1440px;">
-									<div class="banner-slide" id="banner-slide-93446">
-										<img src="/img/sr_257255_large.jpg"
-											alt="Plumbers in Sudbury, Plumbers in Clare, Plumbers in Glemsford">
-
-
-
-									</div>
-								</div>
-								<div class="owl-item" style="width: 1440px;">
-									<div class="banner-slide" id="banner-slide-93455">
-										<img src="/img/sr_257303_large.jpg"
-											alt="Plumbers in Sudbury, Plumbers in Clare, Plumbers in Glemsford">
-
-
-
-									</div>
-								</div>
-								<div class="owl-item" style="width: 1440px;">
-									<div class="banner-slide" id="banner-slide-93464">
-										<img src="/img/sr_257352_large.jpg"
-											alt="Plumbers in Sudbury, Plumbers in Clare, Plumbers in Glemsford">
-
-
-
-									</div>
-								</div>
-							</div>
-						</div>
-
-
-
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-
-		<div id="cta-section">
-			<div id="cta-section-container" class=" container wrapper top-corners-none bottom-corners-none">
-				<div class="row cta-row">
-					<div class=" col-sm-3 cta-1 cta-block hvr-float">
-						<div class="cta-block-container">
-
-							<div class="cta-icon text-center"><a
-									href="/emergency"><i
-										class="fa  fa-exclamation-triangle fa-3x"></i></a></div>
-
-							<h4 class="cta-heading text-center"><a
-									href="/emergency">Emergency</a>
-							</h4>
-							<p class="cta-subtitle text-center"><small><a
-										href="/emergency">Find
-										Out More &gt;&gt;</a></small></p>
-						</div>
-					</div>
-
-
-					<div class=" col-sm-3 cta-2 cta-block hvr-float">
-						<div class="cta-block-container">
-
-							<div class="cta-icon text-center"><a
-									href="/plumbing"><i
-										class="fa  fa-tint fa-3x"></i></a></div>
-
-							<h4 class="cta-heading text-center"><a
-									href="/plumbing">Plumbing</a>
-							</h4>
-							<p class="cta-subtitle text-center"><small><a
-										href="/plumbing">Find
-										Out More &gt;&gt;</a></small></p>
-						</div>
-					</div>
-
-
-					<div class=" col-sm-3 cta-3 cta-block hvr-float">
-						<div class="cta-block-container">
-
-							<div class="cta-icon text-center"><a
-									href="/heating"><i
-										class="fa  fa-fire fa-3x"></i></a></div>
-
-							<h4 class="cta-heading text-center"><a
-									href="/heating">Heating</a>
-							</h4>
-							<p class="cta-subtitle text-center"><small><a
-										href="/heating">Find
-										Out More &gt;&gt;</a></small></p>
-						</div>
-					</div>
-
-
-					<div class=" col-sm-3 cta-4 cta-block hvr-float">
-						<div class="cta-block-container">
-
-							<div class="cta-icon text-center"><a
-									href="/electrics"><i
-										class="fa  fa-bolt fa-3x"></i></a></div>
-
-							<h4 class="cta-heading text-center"><a
-									href="/electrics">Electrics</a>
-							</h4>
-							<p class="cta-subtitle text-center"><small><a
-										href="/electrics">Find
-										Out More &gt;&gt;</a></small></p>
-						</div>
-					</div>
-
-
-				</div>
-			</div>
-		</div>
-
-
-
-
-		<div id="content-section">
-			<div id="content-section-container"
-				class="top-corners-none bottom-corners-none wrapper container top-corners-none">
-
-
-
-
-				<div id="main" class="row">
-
-
-					<div id="sidebar" class="hidden">
-
-						<div id="sidebarcontainer">
-						</div>
-					</div>
-
-
-
-					{{ content }}
-
-
-
-
-					<div id="main-sidebar" class="col-sm-12 col-md-3    ">
-
-						<div id="main-sidebarcontainer">
-
-
-
-
-							<div class="pagesection even    pagesection-" id="pagesection-72498">
-								<div class="pagesection-container   ">
-									<div id="" class="row  row-1col ">
-
-										<div class="col-sm-12">
-											<div
-												class="page_element element_text gutter-bottom sidebar_el_col_1 sidebar_el_col_1_2 text-center ">
-												<h3>QUICK LINKS</h3>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-							<div class="pagesection odd    pagesection-" id="pagesection-72488">
-								<div class="pagesection-container   ">
-									<div id="" class="row  row-1col ">
-
-										<div class="col-sm-12">
-											<div
-												class="page_element element_button gutter-bottom sidebar_el_col_1 sidebar_el_col_1_3 ">
-
-												<p class="text-center"><a
-														href="/contact"
-														class="btn-block btn btn-primary btn-lg">REQUEST A QUOTE</a></p>
-											</div>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-							<div class="pagesection even    pagesection-" id="pagesection-72489">
-								<div class="pagesection-container   ">
-									<div id="" class="row  row-1col ">
-
-										<div class="col-sm-12">
-											<div
-												class="page_element element_button gutter-bottom sidebar_el_col_1 sidebar_el_col_1_4 ">
-
-												<p class="text-center"><a
-														href="/emergency"
-														class="btn-block btn btn-primary btn-lg">EMERGENCY</a></p>
-											</div>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-							<div class="pagesection odd    pagesection-" id="pagesection-72490">
-								<div class="pagesection-container   ">
-									<div id="" class="row  row-1col ">
-
-										<div class="col-sm-12">
-											<div
-												class="page_element element_button gutter-bottom sidebar_el_col_1 sidebar_el_col_1_5 ">
-
-												<p class="text-center"><a
-														href="/plumbing"
-														class="btn-block btn btn-primary btn-lg">PLUMBING</a></p>
-											</div>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-							<div class="pagesection even    pagesection-" id="pagesection-72492">
-								<div class="pagesection-container   ">
-									<div id="" class="row  row-1col ">
-
-										<div class="col-sm-12">
-											<div
-												class="page_element element_button gutter-bottom sidebar_el_col_1 sidebar_el_col_1_6 ">
-
-												<p class="text-center"><a
-														href="/heating"
-														class="btn-block btn btn-primary btn-lg">HEATING</a></p>
-											</div>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-							<div class="pagesection odd    pagesection-" id="pagesection-72493">
-								<div class="pagesection-container   ">
-									<div id="" class="row  row-1col ">
-
-										<div class="col-sm-12">
-											<div
-												class="page_element element_button gutter-bottom sidebar_el_col_1 sidebar_el_col_1_7 ">
-
-												<p class="text-center"><a
-														href="/electrics"
-														class="btn-block btn btn-primary btn-lg">ELECTRICS</a></p>
-											</div>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-							<div class="pagesection even    pagesection-" id="pagesection-72494">
-								<div class="pagesection-container   ">
-									<div id="" class="row  row-1col ">
-
-										<div class="col-sm-12">
-											<div
-												class="page_element element_button gutter-bottom sidebar_el_col_1 sidebar_el_col_1_8 ">
-
-												<p class="text-center"><a
-														href="/lpg"
-														class="btn-block btn btn-primary btn-lg">LPG</a></p>
-											</div>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-							<div class="pagesection odd    pagesection-" id="pagesection-72728">
-								<div class="pagesection-container   ">
-									<div id="" class="row  row-1col ">
-
-										<div class="col-sm-12">
-											<div
-												class="page_element element_button gutter-bottom sidebar_el_col_1 sidebar_el_col_1_9 ">
-
-												<p class="text-center"><a
-														href="/contact"
-														class="btn-block btn btn-primary btn-lg">CONTACT US</a></p>
-											</div>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-							<div class="pagesection even    pagesection-" id="pagesection-72643">
-								<div class="pagesection-container   ">
-									<div id="" class="row  row-1col ">
-
-										<div class="col-sm-12">
-											<div class="page_element element_image el_col_1 el_col_1_10   ">
-												<div class="row clearfix">
-													<div class="col-xs-12">
-
-
-														<img id="item10pimg" alt=""
-															class=" img-responsive pull-center   "
-															src="/img/sr_258168.png">
-
-
-													</div>
-
-
-												</div>
-
-
-
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-
-
-			</div>
-		</div>
-
-
-
-
-
-
-		<div id="footer-section" class="unconstrained">
-			<div id="footer-section-container" class=" top-corners-none   container">
-				<hr>
-
-				<div class="footer-nav">
-
-
-
-					<nav role="tablist" id="nav_navigation">
-						<ul class=" top-corners-none bottom-corners-none" id="nav_navigation_ul">
-
-							<li id="nav_link22088" class="parentnavli  firstli active  temp1235"><a
-									href="/">
-									Home</a>
-							</li>
-
-							<li id="nav_link22089" class="parentnavli     temp1235"><a
-									href="/about">
-									About</a>
-							</li>
-
-							<li id="nav_link22092" class="parentnavli     temp2896"><a
-									href="/emergency">
-									Emergency</a>
-							</li>
-
-							<li id="nav_link22093" class="parentnavli     temp2896"><a
-									href="/plumbing">
-									Plumbing</a>
-							</li>
-
-							<li id="nav_link22094" class="parentnavli     temp2896"><a
-									href="/heating">
-									Heating</a>
-							</li>
-
-							<li id="nav_link22097" class="parentnavli     temp2896"><a
-									href="/electrics">
-									Electrics</a>
-							</li>
-
-							<li id="nav_link22182" class="parentnavli     temp2896"><a
-									href="/lpg">
-									LPG</a>
-							</li>
-
-							<li id="nav_link22095" class="parentnavli     temp2896"><a
-									href="/gas-safe">
-									Gas Safe</a>
-							</li>
-
-							<li id="nav_link22096" class="parentnavli     temp2896"><a
-									href="/areas">
-									Areas</a>
-							</li>
-
-							<li id="nav_link22091" class="parentnavli lastli    temp2906"><a
-									href="/contact">
-									Contact</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<p class="footertext"><a
-						href="/areas">Plumbers in
-						Sudbury</a> | <a
-						href="/areas">Plumbers in
-						Clare</a> | <a
-						href="/areas">Plumbers in
-						Glemsford</a></p>
-				
-
-
-
-
-			</div>
-		</div>
-	</div>
-
-
-	<script>
-		$(window).on("load", function () {
-			$('.item-container').matchHeight();
-			$('.gallery-image-container').matchHeight();
-			$('.element_smart_featurebox').matchHeight();
-			$('.page_element.well').matchHeight();
-			$('.page_element.element_smart_featurebox').matchHeight();
-			$('.departmentwithinitem').matchHeight();
-			$('.page_element.equal').matchHeight({
-				byRow: false
-			});
-			$('.productitem ').matchHeight({
-				byRow: true
-			});
-			$('.listerfeed.itemlisterlist .col-md-4').matchHeight();
-
-
-		});
-	</script>
-
-
+<body>
+
+    {% include sidenav.html %}
+
+    <div class="container-fluid main-body">
+        <div class="row justify-content-center">
+            <div class="col">
+                
+                <div class="container">
+                    {% include topnav.html %}
+                </div>
+                
+                {% include banner.html %}
+
+                <div class="container">
+                    {{ content }}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% include footer.html %}
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/vtoggler.min.js?ver=5.5.3"></script>
 
 </body>
-
 </html>

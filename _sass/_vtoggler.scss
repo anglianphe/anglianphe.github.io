@@ -1,0 +1,28 @@
+/*
+ * VTOGGLER COMPONENT
+ * Toggles the visibility of a vertical menu, with animation.
+ *
+ * How to use:
+ * - Apply the .vtoggler class to the div which needs to be hidden/shown.
+ * - Apply either .vtoggler-show or .vtoggler-hide to that same div, depending
+ *   on whether it should start off visible or hidden.
+ * - Apply the .vtoggler-control class to any div which should toggle the menu when clicked.
+ */
+
+/* Apply this class to the div being toggled vertically */
+.vtoggler {
+    transition: width 0.25s ease-in-out, visibility 0.25s linear, padding 0.25s ease-in;
+}
+
+/* Apply this class to the .vtoggler div if it should start out visible */
+.vtoggler-show {
+    visibility: visible !important;
+}
+
+/* Apply this class to the .vtoggler div if it should start out hidden */
+.vtoggler-hide {
+    width: 0% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    visibility: hidden !important;
+}

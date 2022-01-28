@@ -1,10 +1,14 @@
-https://anglianphe.co.uk
-https://anglianphe.co.uk/about
-https://anglianphe.co.uk/areas
-https://anglianphe.co.uk/contact
-https://anglianphe.co.uk/electrics
-https://anglianphe.co.uk/emergency
-https://anglianphe.co.uk/gas-safe
-https://anglianphe.co.uk/heating
-https://anglianphe.co.uk/lpg
-https://anglianphe.co.uk/plumbing
+---
+---
+{{ site.url }}/
+{{ site.url }}/plumbing/
+{{ site.url }}/heating/
+{{ site.url }}/electrics/
+{{ site.url }}/areas/
+{{ site.url }}/about/
+{{ site.url }}/portfolio/
+{{ site.url }}/contact/
+{{ site.url }}/legal/cookies/
+{{ site.url }}/legal/terms/
+{% for post in site.posts %}{{ site.url }}/{{ post.url }}
+{% endfor %}

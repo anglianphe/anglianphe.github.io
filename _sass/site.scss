@@ -1,0 +1,281 @@
+
+$text8pt: 0.7rem;
+$text10pt: 0.85rem;
+$text12pt: 1rem;
+$text14pt: 1.2rem;
+$text16pt: 1.4rem;
+$text18pt: 1.5rem;
+$text24pt: 2rem;
+$text30pt: 2.45rem;
+
+@import 'colors';
+@import 'fonts';
+@import 'topnav';
+@import 'banner';
+@import 'sidenav';
+@import 'panel';
+@import 'footer';
+
+/* Ensure footer is at bottom of screen on very short pages (e.g. cookies page) */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body > .main-body {
+    flex: 1 0 auto;
+}
+/* /end Ensure footer is at bottom of screen */
+
+/* Stick to 1200px (plus padding) at biggest screen sizes */
+@media screen and (min-width: 1250px) {
+    .container {
+        max-width: 1230px;
+    }
+}
+
+img {
+    @extend .img-fluid;
+}
+
+/* Link style: no color change, underline on hover */
+a, a:hover, .btn-link, .btn-link:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+.btn-link, .btn-link:hover {
+    padding: 0;
+}
+
+/* Helper class to underline text */
+.text-underline {
+    text-decoration: underline;
+}
+
+/* Helper class to underline text on hover */
+.underline-on-hover {
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+}
+
+/* Helper class to remove underline */
+.no-underline {
+    text-decoration: none;
+}
+
+/* Helper class to remove underline */
+div.menu-side-menu-container > li > a {
+    text-decoration: none;
+}
+div.menu-side-menu-container > li > a:hover {
+    text-decoration: underline;
+}
+
+/* Container for the download link on the product page */
+.product-link-container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/* Helper class to remove border */
+.no-border {
+    border: 0px solid transparent;
+    border-radius: 0;
+}
+
+/* Removes blue border from button after being clicked */
+button:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+/* Helper class to set text to 500 (medium) weight */
+.text-medium {
+    font-weight: 500;
+}
+
+/* Helper class to set text to 300 (light) weight */
+.text-weight-light {
+    font-weight: 300;
+}
+
+/* Helper class to set text to 700 (bold) weight */
+.text-weight-bold {
+    font-weight: 700;
+}
+
+blockquote {
+    padding: 20px 20px 8px 20px;
+    background: #eeeeee;
+}
+
+h1 {
+    line-height: $text24pt;
+    font-weight: 300;
+    color: $textColor;
+    margin-bottom: 48px;
+    margin-top: 48px;
+}
+
+h2 {
+    line-height: $text24pt;
+    font-weight: 500;
+    color: $textColor;
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
+h3 {
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+/* Indents text by a fixed width, or a variable width on smaller screens */
+.text-indent {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+@media screen and (min-width: 576px) {
+    .text-indent {
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+}
+
+/* Used for a block of text on a page */
+.text-block {
+    @extend .text-indent;
+    margin-bottom: 90px;
+}
+
+main {
+    margin: 0px 0px;
+}
+
+/* Container for an article preview on the news page */
+.article-preview {
+    font-size: $text14pt;
+    padding: 0;
+    margin: 5% 0;
+
+    .divider {
+        margin-bottom: 1em;
+        line-height: 0.5em;
+    }
+
+    @extend .underline-on-hover;
+}
+@media screen and (min-width: 576px) {
+    .article-preview {
+        padding: 0 0 0 0;
+    }
+}
+
+/* The title of the article in the preview */
+.article-preview .article-title {
+    line-height: 2em;
+    @extend .text-weight-bold;
+}
+
+/* The subtitle of the article in the preview */
+.article-preview .article-subtitle {
+    font-size: $text12pt;
+    @extend .text-weight-light;
+}
+
+/* Container for all the article previews on the news page */
+.article-previews-container {
+    margin: 0 0 12% 0;
+}
+
+/* Container for all the 'other news' links */
+.other-news-links-container {
+    margin: 4% 0 12% 0;
+}
+
+.other-news-link {
+    @extend .text-underline;
+    @extend .text-medium;
+    display: block;
+    margin-top: 30px;
+}
+
+/* The author/date section of an article */
+.article-metadata {
+    margin: 6% 0 2.5% 0;
+}
+
+/* The divider in the author/date section of an article */
+.article-metadata .divider {
+    @extend .text-medium;
+}
+
+/* The div containing the author of an article */
+.article-author {
+    @extend .text-weight-bold;
+}
+
+/* The div containing the date of an article */
+.article-date {
+    font-weight: 400;
+    margin-top: 1em;
+    line-height: 1em;
+}
+
+/* Container for the first block of text on some pages */
+.intro-text {
+    margin: 32px 0;
+}
+
+.underline-links a {
+    text-decoration: underline;
+}
+
+.custom-input {
+    border:none;
+    border-bottom:1px solid #757575;
+    border-radius: 0;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+ul {
+    list-style-type: square;
+    margin-bottom: 0;
+}
+
+ul ul {
+    list-style-type: "\2013\2003";
+    padding-left: 25px;
+}
+
+.cost-col {
+    @extend .text-right;
+}
+
+.jumbotron {
+    height: 100%;
+    margin: 0;
+    padding: 32px;
+    border-radius: 0;
+}
+
+.jumbotron > h4 {
+    margin: 0px;
+}
+
+.btn-primary {
+    background-color: $mainThemeColor;
+    border-color: $mainThemeColor;
+}

@@ -1,0 +1,44 @@
+<div class="vtoggler vtoggler-hide" id="sidenav">
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col">
+                <ul class="nav-menu">
+                    <li class="vtoggler-control small-item text-medium">
+                        <button class="btn btn-link" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="large-item bottom-item text-medium">____</li>
+                    <div class="menu-side-menu-container">
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="/">Home</a>
+                        </li>
+                        {% assign sections = site.data.sections | where:"show-on-side-nav", true %}
+                        {% for section in sections  %}
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="/{{ section.id }}/">{{ section.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </div>
+                    <li class="large-item bottom-item text-medium">____</li>
+                    <div class="menu-side-menu-container">
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="/contact/">Contact Us</a>
+                        </li>
+                    </div>
+                    <li class="large-item bottom-item text-medium">____</li>
+                    <li class="small-item bottom-item">
+                        <a class="no-underline" href="/legal/cookies/">Cookies</a>
+                    </li>
+                    <li class="small-item bottom-item">
+                        <a class="no-underline" href="/legal/terms/">Terms</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>

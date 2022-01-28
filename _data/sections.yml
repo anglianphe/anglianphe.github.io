@@ -1,0 +1,48 @@
+- id: plumbing
+  name: Plumbing
+  subtitle: "From leaky taps to full refits, we have you covered."
+  href: /plumbing/
+  hover-text: "We carry out emergency repairs and burst pipes all the time, from leaky taps and fittings to broken central heating and shower pumps to sump pumps. We install all vented and unvented hot water cylinders, and we design hot water systems for larger domestic dwellings. We design, source and build any bathroom, wetoom or shower room."
+  show-on-homepage: true
+  show-on-side-nav: true
+
+- id: heating
+  name: Heating
+  subtitle: "Boiler service and replacement, cylinder upgrades and more."
+  href: /heating/
+  hover-text: "We carry out all repairs and servicing to nearly all types and makes of boilers by all manufacturers. From new flues to new tanks and bases we do everything to get your heating back up and running with the minimum of fuss. Our fully qualified heating engineers all carry our full company public liability insurance for complete peace of mind."
+  show-on-homepage: true
+  show-on-side-nav: true
+
+- id: electrics
+  name: Electrics
+  supertitle: "&nbsp;"
+  subtitle: "All domestic jobs undertaken, including EV charging points."
+  href: /electrics/
+  hover-text: "From blown fuses or new sockets and lights to full rewires. New consumer units supplied and fitted. Home extensions and garden rooms, home offices and sheds. We also install EV charging points!"
+  show-on-homepage: true
+  show-on-side-nav: true
+
+- id: areas
+  name: Areas We Cover
+  subtitle: "Find out if we cover your area."
+  href: /areas/
+  hover-text: "We cover a 30 mile / 60 minute radius from Haverhill. If you can't see your town or village listed, please contact us and we will happily assist you."
+  show-on-homepage: true
+  show-on-side-nav: true
+
+- id: about
+  name: About Us
+  subtitle: "A little bit about who we are."
+  href: /about/
+  hover-text: "Some more detailed text..."
+  show-on-homepage: false
+  show-on-side-nav: false
+
+- id: portfolio
+  name: Our Portfolio
+  subtitle: "Our portfolio of previous projects."
+  href: /portfolio/
+  hover-text: "Some more detailed text..."
+  show-on-homepage: false
+  show-on-side-nav: false

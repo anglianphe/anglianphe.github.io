@@ -1,0 +1,13 @@
+---
+layout: default
+---
+{% assign section = site.data.sections | where:"id", page.id  | first %}
+<div class="d-none d-lg-block">
+    {% include slimpanel.html section=section size="fullsize" %}
+</div>
+<div class="d-block d-lg-none">
+    {% include slimpanel.html section=section size="smalldevice"  %}
+</div>
+<div class="text-block text-weight-light">
+    {{ content }}
+</div>

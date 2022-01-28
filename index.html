@@ -1,121 +1,25 @@
 ---
 layout: default
-title: Home | Anglian P.H.E.
+title: Home
 ---
-<div id="maincontent" class=" col-md-9 col-sm-12 ">
-	<div id="main-contentcontainer">
-		<div class="pagetitle-wrapper">
-			<h2 id="pagetitle" class=" text-center">Welcome to Anglian Plumbing, Heating and
-				Electrics</h2>
-		</div>
-
-
-
-
-		<div class="pagesection odd    pagesection-bullets  pagesection-hr" id="pagesection-72729">
-			<div class="pagesection-container   ">
-				<div id="" class="row bullets hr row-2cols-8-4">
-
-
-					<div class="col-sm-8">
-						<div class="page_element element_text gutter-bottom el_col_1 el_col_1_2  ">
-							<ul>
-								<li>All oil boilers supplied with a five year workmanship &amp;
-									Manufactors warranty<br></li>
-							</ul>
-							<ul>
-								<li>All new boilers supplied with a full power flush to central
-									heating system, in every price given </li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="page_element element_text gutter-bottom el_col_2 el_col_2_2  ">
-							<ul>
-								<li>100% Money Back Guarentee<br></li>
-							</ul>
-							<ul>
-								<li>Oftec &amp; Safe Gas Registered </li>
-							</ul>
-						</div>
-					</div>
-
-
-				</div>
-			</div>
-		</div>
-		<div class="pagesection even    pagesection-" id="pagesection-72502">
-			<div class="pagesection-container   ">
-				<div id="" class="row  row-1col ">
-
-					<div class="col-sm-12">
-						<div class="page_element element_text gutter-bottom el_col_1 el_col_1_3 text-center ">
-							<p><em><strong>Welcome to Anglian Phe we are a trusted local plumbing
-										service, with over 20 years of experience we are qualified
-										in all aspects of plumbing, electrics and
-										heating.</strong></em></p>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<div class="pagesection odd    pagesection-" id="pagesection-72500">
-			<div class="pagesection-container   ">
-				<div id="" class="row  row-2cols">
-
-					<div class="col-sm-6 ">
-						<div class="page_element element_text gutter-bottom el_col_1 el_col_1_4  ">
-							<h3>'Covering a 30 Miles Radius of Haverhill'</h3>
-							<p><strong>Call us now to book your boiler in for a service, we also
-									specialize in boiler installations including caravans, homes and
-									moblie homes!</strong><br><br>All work carried out is fully
-								guaranteed &amp; insured our rates are very competitive however if
-								you recieve a quote cheaper we will try and beat the price! We are
-								qualified plumbers and have under gone checks, to ensure we have the
-								relevent tools, skills and experience to give the best service to
-								our customers, we are also Gas safe registered <br><br><strong>For a
-									rapid response 24 hours a day 7 days a week call us
-									now!</strong><br>01787278511 07825348536</p>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="page_element element_text gutter-bottom el_col_2 el_col_2_4  ">
-							<h3>Call now for a FREE NO OBLIGATION QUOTE </h3>
-							<p><strong>Just a sample of the work we undertake!</strong><br>
-								Plumber Suffolk, 
-								Plumber Bury St Edmunds, 
-								Plumber Biggleswade, 
-								Plumber Bishops Stortford, 
-								Plumber Braintree, 
-								Plumber Burwell, 
-								Plumber Cambridge, 
-								Plumber Colchester, 
-								Plumber Clare, 
-								Plumber Elmswell, 
-								Plumber Ely, 
-								Plumber Finchingfield, 
-								Plumber Great Yeldham, 
-								Plumber Hadleigh, 
-								Plumber Halstead, 
-								Plumber Haverhill, 
-								Plumber Huntingdon, 
-								Plumber Ixworth, 
-								Plumber Lakenheath, 
-								Plumber Linton, 
-								Plumber Long Melford, 
-								Plumber Mildenhall, 
-								Plumber Newmarket, 
-								Plumber Soham, 
-								Plumber St Neots, 
-								Plumber Stowmarket, 
-								Plumber Sudbury, 
-								Plumber Sutton.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
+<article>
+    <div class="row">
+        {% assign sections = site.data.sections | where:"show-on-homepage", true %}
+        {% for section in sections  %}
+        <div class="d-none d-md-block col-6">
+            <article>
+                <a class="no-underline" href="/{{ section.id }}/">
+                    {% include panel.html section=section size="halfsize" showhovertext=true showsupertitle=false %}
+                </a>
+            </article>
+        </div>
+        <div class="d-block d-md-none col-12">
+            <article>
+                <a class="no-underline" href="/{{ section.id }}/">
+                    {% include panel.html section=section size="smalldevice" showsupertitle=false %}
+                </a>
+            </article>
+        </div>
+        {% endfor %}
+    </div>
+</article>

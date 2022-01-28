@@ -1,0 +1,36 @@
+/* The footer element */
+.footer-top {
+    background-color: $lightThemeColor;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 1250px) {
+    .footer-top {
+        padding-top: 6%;
+        padding-bottom: 2.5%;
+    }
+}
+
+.footer-bottom {
+    background-color: $mainThemeColor;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer h5 {
+    font-weight: 400;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+/* Elements in the footer which contain text */
+.footer-text {
+    font-size: $text12pt;
+    line-height: $text16pt;
+    font-weight: 500;
+}

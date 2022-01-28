@@ -1,0 +1,36 @@
+/* Text style for tagline on topnav */
+.tagline {
+    font-size: $text16pt;
+    line-height: $text16pt;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 992px) {
+    .tagline {
+        font-size: 18.5px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .tagline {
+        font-size: 14.3px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .tagline {
+        font-size: 10.75px;
+    }
+}
+
+/* The top half of the top navigation bar */
+.topnav {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}
+
+.menu-icon {
+    fill: $mainThemeColor;
+    height: 50px;
+    width: 50px;
+}

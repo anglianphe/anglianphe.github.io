@@ -1,0 +1,47 @@
+<div class="row banner">
+    <div class="container">
+        <div class="row banner">
+            
+            {% capture svg_path %}
+            <path d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364L.102 2.223zm13.37 9.019.528.026.287.445.445.287.026.529L15 13l-.242.471-.026.529-.445.287-.287.445-.529.026L13 15l-.471-.242-.529-.026-.287-.445-.445-.287-.026-.529L11 13l.242-.471.026-.529.445-.287.287-.445.529-.026L13 11l.471.242z"/>
+            {% endcapture %}
+            {% capture url %}
+            /plumbing
+            {% endcapture %}
+            {% include banner-button.html path=svg_path text="Plumbing" url=url %}
+            
+            {% capture svg_path %}
+            <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585a1.5 1.5 0 0 1 1 1.415z"/>
+            <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+            {% endcapture %}
+            {% capture url %}
+            /heating
+            {% endcapture %}
+            {% include banner-button.html path=svg_path text="Heating" url=url %}
+            
+            {% capture svg_path %}
+            <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/>
+            {% endcapture %}
+            {% capture url %}
+            /electrics
+            {% endcapture %}
+            {% include banner-button.html path=svg_path text="Electrics" url=url %}
+
+        </div>
+    </div>
+</div>
+<div class="row sub-banner">
+    <div class="container">
+        <div class="row sub-banner">
+            <div class="col banner-item">
+                <img src="/img/oftec.svg" style="height: 60px" height="60" width="52" />
+            </div>
+            <div class="col banner-item">
+                <img src="/img/gas-safe.svg" style="height: 60px" height="60" width="55" />
+            </div>
+            <div class="col banner-item">
+                <img src="/img/napit.svg" style="height: 60px" height="60" width="80" />
+            </div>
+        </div>
+    </div>
+</div>

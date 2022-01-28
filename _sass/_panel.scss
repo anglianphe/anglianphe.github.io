@@ -1,0 +1,238 @@
+/* The panel component */
+.panel {
+    background-color: $lightThemeColor;
+    background-repeat: no-repeat; /* Style the background (which is set in another class) */
+    background-size: cover;
+    background-position: center;
+    width: 100%; /* Fill the container */
+    padding-bottom: 35%;
+    margin: 2.5% 0; /* ensures spacing around top and bottom of the panel */
+    color: $mainThemeColor;
+    font-size: 25px;
+    position: relative;
+    border-color: $mainThemeColor;
+}
+
+.slimpanel-fullsize {
+    padding-bottom: 10%;
+    font-size: 14px;
+}
+
+.slimpanel-smalldevice {
+    padding-bottom: 15%;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+    .panel {
+        font-size: 20.667px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .panel {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .panel {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .panel {
+        font-size: 2vw;
+    }
+    .panel-text {
+        font-size: 12px;
+    }
+}
+
+.panel-content {
+    position: absolute;
+    padding: 3.3%;
+    width: 100%;
+    height: 100%;
+}
+
+.panel-content-inner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-shrink-row {
+    min-height: 0;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+/* Full size panels are full page width */
+.panel-divider-fullsize {
+    font-size: 1.5em;
+    display: block;
+    line-height: 0;
+}
+
+.panel .divider-top-fullsize {
+    @extend .panel-divider-fullsize;
+    margin-bottom: 0.4em;
+    margin-top: 0.7em;
+}
+
+.panel .divider-bottom-fullsize {
+    @extend .panel-divider-fullsize;
+    margin-bottom: 1.4em;
+    margin-top: -0.4em;
+}
+
+.panel-title-fullsize {
+    font-size: 2.9em;
+    line-height: 1.2em;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 5px;
+}
+
+.panel-subtitle-fullsize {
+    font-size: 1em;
+    line-height: 1.4em;
+    display: block;
+    padding-left: 5px;
+}
+
+.panel-text-fullsize {
+    font-size: 1em;
+    line-height: 1.4em;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 5px;
+}
+
+.panel-extra-text {
+    border-left: solid white 3px;
+    font-size: 0.75em;
+    max-height: 100%;
+}
+
+/* Half size panels are for use in two-column situations */
+.panel-title-halfsize {
+    font-size: 1.6em;
+    line-height: 1.2em;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 5px;
+}
+
+.panel-subtitle-halfsize {
+    font-size: 0.7em;
+    line-height: 1.1em;
+    display: block;
+    padding-left: 5px;
+}
+
+.panel-text-halfsize {
+    font-size: 0.7em;
+    line-height: 1.4em;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 5px;
+}
+
+.panel-extra-text-halfsize {
+    border-left: solid white 3px;
+    font-size: 0.7em;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.panel-divider-halfsize {
+    font-size: 1em;
+    display: block;
+    line-height: 0;
+}
+
+.panel .divider-top-halfsize {
+    @extend .panel-divider-halfsize;
+    margin-bottom: 0.4em;
+    margin-top: 0.4em;
+}
+
+.panel .divider-bottom-halfsize {
+    @extend .panel-divider-halfsize;
+    margin-bottom: 1em;
+    margin-top: -0.4em;
+}
+
+/* Small device panels are full page width but with increased text size for small screens */
+.panel-divider-smalldevice {
+    font-size: 1.5em;
+    display: block;
+    line-height: 0;
+}
+
+.panel .divider-top-smalldevice {
+    @extend .panel-divider-smalldevice;
+    margin-bottom: 1.1em;
+    margin-top: 0;
+}
+
+.panel .divider-bottom-smalldevice {
+    @extend .panel-divider-smalldevice;
+    margin-bottom: 0.8em;
+    margin-top: 0;
+}
+
+.panel-title-smalldevice {
+    font-size: 2.9em;
+    line-height: 1.2em;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 5px;
+}
+
+.panel-subtitle-smalldevice {
+    font-size: 1.4em;
+    line-height: 1.8em;
+    display: block;
+    padding-left: 5px;
+}
+
+.panel-text-smalldevice {
+    font-size: 1.4em;
+    line-height: 1.8em;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 5px;
+}
+
+
+/* hide/show the extra text of the panel */
+@media (min-width: 992px) {
+    .display-on-hover {
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .panel:hover .display-on-hover {
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.3s ease-in;
+    }
+    
+    .panel:hover .hide-on-hover {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.panel-img {
+    margin: 2.5% 0;
+}
+
+// https://www.pexels.com/photo/water-flows-from-the-tap-to-sink-6256/
+// https://www.pexels.com/photo/staircase-with-metal-railings-in-multistory-house-5716708/
+// https://pixabay.com/photos/wire-cables-electric-network-1098059/
+// https://unsplash.com/photos/AFB6S2kibuk
+// https://pixabay.com/photos/imprint-about-us-map-hand-finger-418593/
+// https://www.pexels.com/photo/white-bathroom-interior-1454804/

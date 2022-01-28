@@ -1,0 +1,56 @@
+@import 'vtoggler';
+
+/* The pop-out side navigation drawer */
+#sidenav {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: $mainThemeColor;
+    opacity: 0.95;
+    white-space: nowrap;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    color: $textColorLight;
+    padding: 25px 25px 25px 25px;
+    width: 50%;
+    height: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    #sidenav {
+        width: 100%;
+    }
+}
+
+/* Styling the items in the side menu */
+#sidenav li {
+    list-style-type: none; /* no bullet points */
+}
+
+#sidenav ul {
+    padding: 0;
+}
+
+li.menu-item {
+    @extend li, .large-item;
+    font-weight: 500;
+}
+
+/* A more prominent item in the side menu */
+li.large-item {
+    margin-top: $text18pt;
+    font-size: $text18pt;
+    line-height: $text18pt;
+}
+
+/* A less prominent item in the side menu */
+li.small-item {
+    margin-top: $text18pt;
+    font-size: $text12pt;
+    line-height: $text12pt;
+}
+
+/* Changes the spacing of the bottom item in a section */
+li.bottom-item {
+    margin-top: $text12pt;
+}

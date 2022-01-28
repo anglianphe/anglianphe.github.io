@@ -1,0 +1,35 @@
+{% if include.section.hover-text and include.showhovertext %}
+    {% assign showhovertext = true %}
+{% else %}
+    {% assign showhovertext = false %}
+{% endif %}
+<div class="panel panel-{{ include.section.id }} border" style="background-image: url('/{{ include.section.id }}/banner.webp')">
+    <div class="panel-content">
+        <div class="panel-content-inner {% if showhovertext %}hide-on-hover{% endif %}">
+            <div class="row">
+                <div class="col-12">
+                    <span class="panel-subtitle-{{ include.size }}">&nbsp;</span>
+                </div>
+            </div>
+            <div class="row flex-shrink-row align-items-center">
+                <div class="col-8">
+                    <span class="panel-title-{{ include.size }}">{{ include.section.name }}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="panel-text-{{ include.size }}">{{ include.section.subtitle }}</div>
+                </div>
+            </div>
+        </div>
+        {% if showhovertext %}
+        <div class="panel-content-inner col-12 col-lg-12 d-none d-lg-block display-on-hover">
+            <div class="row panel-extra-text-{{ include.size }}">
+                <div class="col-12">
+                    {{ include.section.hover-text }}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,25 @@
+.banner {
+    background-color: $mainThemeColor;
+    height: 75px;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}
+
+.banner-item {
+    text-align: center;
+    color: #fff;
+}
+
+.banner-item-icon {
+    height: 30px;
+    width: 30px;
+    fill: #fff;
+}
+
+.sub-banner {
+    background-color: $lightThemeColor;
+    height: 75px;
+    margin-bottom: 25px;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}

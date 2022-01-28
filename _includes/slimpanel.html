@@ -1,0 +1,11 @@
+<div class="panel panel-{{ include.section.id }} slimpanel-{{ include.size }} border" style="background-image: url('/{{ include.section.id }}/banner.webp');">
+    <div class="panel-content">
+        <div class="panel-content-inner {% if showhovertext %}hide-on-hover{% endif %}">
+            <div class="row flex-shrink-row align-items-center">
+                <div class="col-12">
+                    <span class="panel-title-{{ include.size }}">{{ include.section.name }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
