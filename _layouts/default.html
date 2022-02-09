@@ -43,18 +43,42 @@
             "@context":"https://schema.org",
             "@graph":[
                 {
-                    "@type":"Organization",
-                    "@id":"{{ site.url }}/#organization",
+                    "@type":"LocalBusiness",
+                    "@id":"https://anglianphe.co.uk/#organization",
+                    "legalName": "ANGLIAN PHE LIMITED",
+                    "vatID": "GB289913248",
+                    "duns": "220423950",
                     "name":"Anglian P.H.E.",
-                    "url":"{{ site.url }}/",
+                    "slogan": "Your trusted local plumber and electrician",
+                    "description": "Plumbing, heating and electrical services",
+                    "url":"https://anglianphe.co.uk/",
                     "sameAs":[
                         "https://www.facebook.com/anglianphe"
                     ],
+                    "address": {
+                    	"streetAddress": "5 Lower Green",
+                        "addressLocality": "Stoke by Clare",
+                        "addressRegion": "Suffolk",
+                    	"addressCountry": "GB",
+                        "areaServed": {
+                        	"@type": "GeoShape",
+                        	"circle": "52.076128,0.441117,50000"
+                        }
+                    },
+                    "geo": {
+						"@type": "GeoCoordinates",
+						"latitude": "52.064027",
+						"longitude": "0.539089"
+					},
+                    "telephone": "+441787278511",
+                    "email": "info@anglianphe.co.uk",
+                    "openingHours": "Mo-Su 00:00-23:59",
+                    "image": "https://anglianphe.co.uk/img/logo.png",
                     "logo":{
                         "@type":"ImageObject",
-                        "@id":"{{ site.url }}/#logo",
+                        "@id":"https://anglianphe.co.uk/#logo",
                         "inLanguage":"en-GB",
-                        "url":"{{ site.url }}/img/logo.png",
+                        "url":"https://anglianphe.co.uk/img/logo.png",
                         "width":200,
                         "height":300,
                         "caption":"Anglian P.H.E."
