@@ -27,7 +27,7 @@
     <!-- Search Engines -->
     <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
     <meta name="google" content="nositelinkssearchbox">
-    <link rel="canonical" href="/{{ page.url }}"/>
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
 
     <!-- Open Graph -->
     <meta property="og:image" content="{% if page.og-image %}{{ page.og-image }}{% else %}/img/default-og-image.png{% endif %}"/>
